@@ -13,7 +13,7 @@ print('ROBO :  We will indicate whether your guess is too high or too low to the
 def singleplayer():
     range = 100
     difficulty = input('What difficulty would you want to play with (Easy, Hard or Medium) ?  ').lower().strip()
-    chance = 14
+    chance = 9
     name = input('Please tell your name :  ').capitalize()
     match difficulty:
         case 'easy':
@@ -71,10 +71,10 @@ def multiplayer():
     rand = int(rand)
     # space for the contain hint
     # if want to , can add the hint
-    chance = 20
-    time = 20
-    chance1 = 9
-    chance2 = 9
+    chance = 10
+    time = 10
+    chance1 = 4
+    chance2 = 4
     p1 = input('Who will be Player 1 ?  ').capitalize()
     p2 = input('Who will be Player 2 ?  ').capitalize()
     while chance >= 0:
