@@ -28,7 +28,8 @@ def singleplayer():
     rand = str(rand)
     hint = rand[0]
     rand = int(rand)
-    print(f'HINT :  The random number contains \'{hint}\' in it')
+    # space for the contain hint
+    # if want to , can add the hint
     while chance >= 0:
         ans = int(input('Guess the Number : '))
         print('')
@@ -68,7 +69,8 @@ def multiplayer():
     rand = str(rand)
     hint = rand[0]
     rand = int(rand)
-    print(f'HINT :  The random number contains \'{hint}\' in it')
+    # space for the contain hint
+    # if want to , can add the hint
     chance = 20
     time = 20
     chance1 = 9
