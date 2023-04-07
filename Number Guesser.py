@@ -6,9 +6,12 @@ print('ROBO :  Welcome to \'THE GUESSER\'')
 print('ROBO :  This game can include upto 2 players')
 print('ROBO :  In this game you have to guess a number between \'1 to 100\'')
 players = input('ROBO :  How many players will play ?  ').lower().strip()
+print('There will be some hints in the game')
+print('We will indicate whether your guess is too high or too low to the \'RANDOM NUMBER\''')
 
 
 def singleplayer():
+    range = 100
     difficulty = input('What difficulty would you want to play with (Easy, Hard or Medium) ?  ').lower().strip()
     chance = 14
     name = input('Please tell your name :  ')
@@ -43,6 +46,10 @@ def singleplayer():
             print('You are left with 0 chances')
             quit()
         chance -= 1
+    if ans < rand:
+        print('LOW')
+    else:
+        print('HIGH')
 
 
 def multiplayer():
@@ -81,6 +88,10 @@ def multiplayer():
                     print('The guess is incorrect')
                     print(f'{p1} have {chance1} chances left')
             chance1 -= 1
+            if player1 < rand:
+                print('LOW')
+            else:
+                print('HIGH')
         elif time % 2 == 1:
             player2 = int(input(f'{p2} Guess the number :  '))
             print('')
@@ -94,6 +105,10 @@ def multiplayer():
                     print('The guess is incorrect')
                     print(f'{p2} have {chance2} chances left')
             chance2 -= 1
+            if player2 < rand:
+                print('LOW')
+            else:
+                print('HIGH')
         chance -= 1
         time -= 1
         if time == 0:
