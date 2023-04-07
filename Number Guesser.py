@@ -6,8 +6,8 @@ print('ROBO :  Welcome to \'THE GUESSER\'')
 print('ROBO :  This game can include upto 2 players')
 print('ROBO :  In this game you have to guess a number between \'1 to 100\'')
 players = input('ROBO :  How many players will play ?  ').lower().strip()
-print('There will be some hints in the game')
-print('We will indicate whether your guess is too high or too low to the \'RANDOM NUMBER\'')
+print('ROBO :  There will be some hints in the game')
+print('ROBO :  We will indicate whether your guess is too high or too low to the \'RANDOM NUMBER\'')
 
 
 def singleplayer():
