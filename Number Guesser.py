@@ -14,7 +14,7 @@ def singleplayer():
     range = 100
     difficulty = input('What difficulty would you want to play with (Easy, Hard or Medium) ?  ').lower().strip()
     chance = 14
-    name = input('Please tell your name :  ')
+    name = input('Please tell your name :  ').capitalize()
     match difficulty:
         case 'easy':
             easy()
@@ -46,10 +46,11 @@ def singleplayer():
             print('You are left with 0 chances')
             quit()
         chance -= 1
-    if ans < rand:
-        print('LOW')
-    else:
-        print('HIGH')
+        print('')
+        if ans < rand:
+            print('The number is LOW')
+        else:
+            print('The number is HIGH')
 
 
 def multiplayer():
@@ -72,8 +73,8 @@ def multiplayer():
     time = 20
     chance1 = 9
     chance2 = 9
-    p1 = input('Who will be Player 1 ?  ')
-    p2 = input('Who will be Player 2 ?  ')
+    p1 = input('Who will be Player 1 ?  ').capitalize()
+    p2 = input('Who will be Player 2 ?  ').capitalize()
     while chance >= 0:
         if time % 2 == 0:
             player1 = int(input(f'{p1} Guess the Number : '))
@@ -88,10 +89,11 @@ def multiplayer():
                     print('The guess is incorrect')
                     print(f'{p1} have {chance1} chances left')
             chance1 -= 1
+            print('')
             if player1 < rand:
-                print('LOW')
+                print('The number is LOW')
             else:
-                print('HIGH')
+                print('The number is HIGH')
         elif time % 2 == 1:
             player2 = int(input(f'{p2} Guess the number :  '))
             print('')
@@ -105,10 +107,11 @@ def multiplayer():
                     print('The guess is incorrect')
                     print(f'{p2} have {chance2} chances left')
             chance2 -= 1
+            print('')
             if player2 < rand:
-                print('LOW')
+                print('The number is LOW')
             else:
-                print('HIGH')
+                print('The number is HIGH')
         chance -= 1
         time -= 1
         if time == 0:
