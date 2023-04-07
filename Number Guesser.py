@@ -23,7 +23,7 @@ def singleplayer():
         case 'hard':
             hard()
         case _:
-            print('No such difficulty exists')
+            print('ERROR : No such difficulty exists 😵🥴')
     rand = random.choice(num)
     rand = str(rand)
     hint = rand[0]
@@ -64,7 +64,7 @@ def multiplayer():
         case 'hard':
             hard()
         case _:
-            print('No such difficulty exists')
+            print('ERROR :  No such difficulty exists 😵🥴')
     rand = random.choice(num)
     rand = str(rand)
     hint = rand[0]
@@ -147,4 +147,4 @@ match players:
     case '2' | 'two' | 'Two':
         multiplayer()
     case _:
-        print('this game supports players upto 2 only')
+        print('ERROR :  This game supports players upto 2 only 😐😐')
