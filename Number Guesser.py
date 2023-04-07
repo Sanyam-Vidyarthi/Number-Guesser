@@ -28,7 +28,7 @@ def singleplayer():
     rand = str(rand)
     hint = rand[0]
     rand = int(rand)
-    print(f'The random number contains \'{hint}\' in it')
+    print(f'HINT :  The random number contains \'{hint}\' in it')
     while chance >= 0:
         ans = int(input('Guess the Number : '))
         print('')
@@ -42,15 +42,15 @@ def singleplayer():
                 print('The guess is incorrect')
                 print(f'You have {chance} chances left')
         if chance == 0:
-            print(f'{name}, You lost')
+            print(f'{name}, You lost 😭😢')
             print('You are left with 0 chances')
             quit()
         chance -= 1
-        print('')
         if ans < rand:
-            print('The number is LOW')
+            print('HINT :  The number you guessed is LOWER')
         else:
-            print('The number is HIGH')
+            print('HINT :  The number you guessed is HIGHER')
+        print('')
 
 
 def multiplayer():
@@ -68,7 +68,7 @@ def multiplayer():
     rand = str(rand)
     hint = rand[0]
     rand = int(rand)
-    print(f'The random number contains \'{hint}\' in it')
+    print(f'HINT :  The random number contains \'{hint}\' in it')
     chance = 20
     time = 20
     chance1 = 9
@@ -91,9 +91,10 @@ def multiplayer():
             chance1 -= 1
             print('')
             if player1 < rand:
-                print('The number is LOW')
+                print('HINT :  The number you guessed is LOWER')
             else:
-                print('The number is HIGH')
+                print('HINT :  The number you guessed is HIGHER')
+            print('')
         elif time % 2 == 1:
             player2 = int(input(f'{p2} Guess the number :  '))
             print('')
@@ -109,9 +110,9 @@ def multiplayer():
             chance2 -= 1
             print('')
             if player2 < rand:
-                print('The number is LOW')
+                print('HINT :  The number you guessed is LOWER')
             else:
-                print('The number is HIGH')
+                print('HINT :  The number you guessed is HIGHER')
         chance -= 1
         time -= 1
         if time == 0:
