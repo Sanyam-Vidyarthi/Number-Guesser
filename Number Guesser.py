@@ -28,7 +28,7 @@ def singleplayer():
     rand = str(rand)
     hint = rand[0]
     rand = int(rand)
-    print(f'The random 3number contains \'{hint}\' in it')
+    print(f'The random number contains \'{hint}\' in it')
     while chance >= 0:
         ans = int(input('Guess the Number : '))
         print('')
