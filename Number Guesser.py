@@ -91,7 +91,6 @@ def multiplayer():
                     print('The guess is incorrect')
                     print(f'{p1} have {chance1} chances left')
             chance1 -= 1
-            print('')
             if player1 < rand:
                 print('HINT :  The number you guessed is LOWER')
             else:
@@ -110,11 +109,11 @@ def multiplayer():
                     print('The guess is incorrect')
                     print(f'{p2} have {chance2} chances left')
             chance2 -= 1
-            print('')
             if player2 < rand:
                 print('HINT :  The number you guessed is LOWER')
             else:
                 print('HINT :  The number you guessed is HIGHER')
+            print('')
         chance -= 1
         time -= 1
         if time == 0:
